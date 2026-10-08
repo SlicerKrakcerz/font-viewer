@@ -1,0 +1,373 @@
+<!-- Import Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700;900&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #0f172a;
+    --merah: #e11d48;
+    --putih: #ffffff;
+    --off-white: #f8fafc;
+    --abu-gelap: #334155;
+    --abu-terang: #e2e8f0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white);
+    color: var(--abu-gelap);
+    font-family: 'Inter', sans-serif;
+  }
+
+  header {
+    background-color: var(--navy);
+    color: var(--putih);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--merah);
+  }
+
+  header h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+  }
+
+  header p {
+    margin: 10px 0 0 0;
+    color: #cbd5e1;
+    font-weight: 400;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .test-box {
+    background: var(--putih);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--merah);
+  }
+
+  .test-box label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+  }
+
+  .test-box input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--abu-terang);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-card {
+    background: var(--putih);
+    border: 1px solid var(--abu-terang);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .font-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--abu-terang);
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .font-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0;
+  }
+
+  .font-badge {
+    background: var(--abu-terang);
+    color: var(--abu-gelap);
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .badge-serif { background: #e0e7ff; color: #3730a3; }
+  .badge-sans { background: #dcfce7; color: #166534; }
+
+  .char-set {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    word-break: break-all;
+    margin-bottom: 1.5rem;
+    color: var(--navy);
+    background: var(--off-white);
+    padding: 1rem;
+    border-radius: 4px;
+  }
+
+  .char-set span {
+    color: var(--merah);
+    font-weight: bold;
+  }
+
+  .preview-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .live-preview {
+    font-size: 2rem;
+    color: var(--navy);
+    line-height: 1.4;
+    min-height: 3rem;
+    word-break: break-word;
+  }
+
+  .ff-playfair { font-family: 'Playfair Display', serif; }
+  .ff-merriweather { font-family: 'Merriweather', serif; }
+  .ff-inter { font-family: 'Inter', sans-serif; }
+  .ff-montserrat { font-family: 'Montserrat', sans-serif; }
+  .ff-poppins { font-family: 'Poppins', sans-serif; }
+
+  .combo-section {
+    background: var(--navy);
+    color: var(--putih);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+  }
+
+  .combo-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--putih);
+  }
+
+  .combo-card {
+    background: var(--putih);
+    color: var(--abu-gelap);
+    padding: 2rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    border-left: 6px solid var(--merah);
+  }
+
+  .combo-card .tag {
+    font-size: 0.75rem;
+    background: var(--merah);
+    color: var(--putih);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+
+  .combo-headline {
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .combo-body {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+  }
+</style>
+
+<header>
+  <h1>Tipografi Jurnalistik</h1>
+  <p>Preview Font untuk Gerakan Mahasiswa (Kredibel, Tegas, Terpercaya)</p>
+</header>
+
+<div class="container">
+  <div class="test-box">
+    <label for="customText">Ketik teks di sini untuk mencoba semua font sekaligus:</label>
+    <input type="text" id="customText" placeholder="Contoh: Kabar Terbaru Gerakan Mahasiswa..." value="Mahasiswa Bergerak Menuntut Keadilan">
+  </div>
+
+  <div class="font-card">
+    <div class="font-header">
+      <div>
+        <h2 class="font-name ff-playfair">Playfair Display</h2>
+        <p style="margin: 5px 0 0 0; font-size: 0.9rem;">Rekomendasi Utama untuk <b>Judul/Headline</b></p>
+      </div>
+      <span class="font-badge badge-serif">Serif (Koran Klasik)</span>
+    </div>
+
+    <div class="preview-label">Karakter Lengkap</div>
+    <div class="char-set ff-playfair">
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br>
+      a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+      0 1 2 3 4 5 6 7 8 9 <br>
+      <span>! @ # $ % & * ( ) _ + - = [ ] { } | ; : ' " , . / ?</span>
+    </div>
+
+    <div class="preview-label">Live Preview (Bold)</div>
+    <div class="live-preview ff-playfair" style="font-weight: 700;"></div>
+    <div class="preview-label">Live Preview (Regular)</div>
+    <div class="live-preview ff-playfair" style="font-weight: 400;"></div>
+  </div>
+
+  <div class="font-card">
+    <div class="font-header">
+      <div>
+        <h2 class="font-name ff-merriweather">Merriweather</h2>
+        <p style="margin: 5px 0 0 0; font-size: 0.9rem;">Alternatif untuk <b>Judul/Headline</b> (Sangat Tegas)</p>
+      </div>
+      <span class="font-badge badge-serif">Serif (Jurnalistik)</span>
+    </div>
+
+    <div class="preview-label">Karakter Lengkap</div>
+    <div class="char-set ff-merriweather">
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br>
+      a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+      0 1 2 3 4 5 6 7 8 9 <br>
+      <span>! @ # $ % & * ( ) _ + - = [ ] { } | ; : ' " , . / ?</span>
+    </div>
+
+    <div class="preview-label">Live Preview (Bold)</div>
+    <div class="live-preview ff-merriweather" style="font-weight: 700;"></div>
+    <div class="preview-label">Live Preview (Regular)</div>
+    <div class="live-preview ff-merriweather" style="font-weight: 400;"></div>
+  </div>
+
+  <div class="font-card">
+    <div class="font-header">
+      <div>
+        <h2 class="font-name ff-inter">Inter</h2>
+        <p style="margin: 5px 0 0 0; font-size: 0.9rem;">Rekomendasi Utama untuk <b>Isi Berita/Caption</b></p>
+      </div>
+      <span class="font-badge badge-sans">Sans-Serif (Bersih/Modern)</span>
+    </div>
+
+    <div class="preview-label">Karakter Lengkap</div>
+    <div class="char-set ff-inter">
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br>
+      a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+      0 1 2 3 4 5 6 7 8 9 <br>
+      <span>! @ # $ % & * ( ) _ + - = [ ] { } | ; : ' " , . / ?</span>
+    </div>
+
+    <div class="preview-label">Live Preview (Bold)</div>
+    <div class="live-preview ff-inter" style="font-weight: 700;"></div>
+    <div class="preview-label">Live Preview (Regular)</div>
+    <div class="live-preview ff-inter" style="font-weight: 400;"></div>
+  </div>
+
+  <div class="font-card">
+    <div class="font-header">
+      <div>
+        <h2 class="font-name ff-montserrat">Montserrat</h2>
+        <p style="margin: 5px 0 0 0; font-size: 0.9rem;">Alternatif Modern untuk <b>Judul/Sub-judul</b></p>
+      </div>
+      <span class="font-badge badge-sans">Sans-Serif (Geometris)</span>
+    </div>
+
+    <div class="preview-label">Karakter Lengkap</div>
+    <div class="char-set ff-montserrat">
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br>
+      a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+      0 1 2 3 4 5 6 7 8 9 <br>
+      <span>! @ # $ % & * ( ) _ + - = [ ] { } | ; : ' " , . / ?</span>
+    </div>
+
+    <div class="preview-label">Live Preview (Bold)</div>
+    <div class="live-preview ff-montserrat" style="font-weight: 700;"></div>
+    <div class="preview-label">Live Preview (Regular)</div>
+    <div class="live-preview ff-montserrat" style="font-weight: 400;"></div>
+  </div>
+
+  <div class="font-card">
+    <div class="font-header">
+      <div>
+        <h2 class="font-name ff-poppins">Poppins</h2>
+        <p style="margin: 5px 0 0 0; font-size: 0.9rem;">Opsi tambahan (Muda & Energik, kurang formal untuk berita berat)</p>
+      </div>
+      <span class="font-badge badge-sans">Sans-Serif (Bulat/Ramah)</span>
+    </div>
+
+    <div class="preview-label">Karakter Lengkap</div>
+    <div class="char-set ff-poppins">
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br>
+      a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+      0 1 2 3 4 5 6 7 8 9 <br>
+      <span>! @ # $ % & * ( ) _ + - = [ ] { } | ; : ' " , . / ?</span>
+    </div>
+
+    <div class="preview-label">Live Preview (Bold)</div>
+    <div class="live-preview ff-poppins" style="font-weight: 600;"></div>
+    <div class="preview-label">Live Preview (Regular)</div>
+    <div class="live-preview ff-poppins" style="font-weight: 400;"></div>
+  </div>
+
+  <div class="combo-section">
+    <h2 class="combo-title">Simulasi Kombinasi Font di Artikel</h2>
+
+    <div class="combo-card">
+      <span class="tag">Kombinasi 1 (Klasik Media)</span>
+      <h3 class="combo-headline ff-playfair" style="font-weight: 700;">Playfair Display + Inter</h3>
+      <p class="combo-body ff-inter">Gerakan Mahasiswa merespons kebijakan baru dengan tuntutan yang jelas dan berbasis data. Aksi damai yang dilakukan hari ini berpusat di titik-titik utama ibu kota, membawa pesan kuat tentang transparansi dan keadilan.</p>
+    </div>
+
+    <div class="combo-card">
+      <span class="tag">Kombinasi 2 (Tegas & Berani)</span>
+      <h3 class="combo-headline ff-merriweather" style="font-weight: 900;">Merriweather + Inter</h3>
+      <p class="combo-body ff-inter">Gerakan Mahasiswa merespons kebijakan baru dengan tuntutan yang jelas dan berbasis data. Aksi damai yang dilakukan hari ini berpusat di titik-titik utama ibu kota, membawa pesan kuat tentang transparansi dan keadilan.</p>
+    </div>
+
+    <div class="combo-card">
+      <span class="tag">Kombinasi 3 (Modern Eksekutif)</span>
+      <h3 class="combo-headline ff-montserrat" style="font-weight: 700;">Montserrat + Inter</h3>
+      <p class="combo-body ff-inter">Gerakan Mahasiswa merespons kebijakan baru dengan tuntutan yang jelas dan berbasis data. Aksi damai yang dilakukan hari ini berpusat di titik-titik utama ibu kota, membawa pesan kuat tentang transparansi dan keadilan.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const inputField = document.getElementById('customText');
+  const previewElements = document.querySelectorAll('.live-preview');
+
+  function updatePreviews() {
+    const text = inputField.value || 'Ketik teks di atas untuk melihat perubahan...';
+    previewElements.forEach(el => {
+      el.textContent = text;
+    });
+  }
+
+  updatePreviews();
+  inputField.addEventListener('input', updatePreviews);
+</script>
